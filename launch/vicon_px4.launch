@@ -4,7 +4,7 @@
    <include file="$(find vicon)/launch/vicon.launch"/>
    <include file="$(find vicon_odom)/launch/vicon_odom.launch" pass_all_args="true"/>
 
-   <node name="remap_odom" type="remap_odom.py" pkg="vicon_px4"
+   <node name="remap_odom" type="remap_odom.py" pkg="vicon_px4">
       <param name="model" value="$(arg model)"/>
    </node>
 </launch>

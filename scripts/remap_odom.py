@@ -15,7 +15,7 @@ def callback(msg):
 
 if __name__ == "__main__":
     rospy.init_node('odometry', anonymous=True) #make node
-    model = rospy.get_param("model")
+    model = rospy.get_param("~model")
 
     rospy.Subscriber('/%s/odom' % model, Odometry, callback)
     rospy.spin()
